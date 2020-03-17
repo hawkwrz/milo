@@ -1,5 +1,5 @@
-# milo
-test tasks
+# MILO
+Technical test
 ## Installation project
 Clone project.
 
@@ -28,3 +28,17 @@ input.txt should have one line in the "A/B/C" format, where A,B,C are integers b
 python task.py input.txt
 ```
 It will print outputthe earliest possible legal date between Jan 1, 2000 and Dec 31, 2999 (inclusive)
+## Changelog/release note
+
+```
+(unreleased)
+------------
+- Screenshots. [Jakub Żmuda]
+- Requirements and python task. [Jakub Żmuda]
+- CSV download option. [Jakub Żmuda]
+- Unittesting. [Jakub Żmuda]
+- Migrations. [Jakub Żmuda]
+- Views, templates, model fix, urls. [Jakub Żmuda]
+- CustomUser model. [Jakub Żmuda]
+- Initial commit. [Jakub Żmuda]
+```
