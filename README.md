@@ -28,7 +28,20 @@ input.txt should have one line in the "A/B/C" format, where A,B,C are integers b
 python task.py input.txt
 ```
 It will print outputthe earliest possible legal date between Jan 1, 2000 and Dec 31, 2999 (inclusive)
-## Changelog/release note
+
+
+## List what was done
+```
++ Installed latest Django
++ CustomUser model is a extended User model with new fields birthday and number(random number between 1-100)
++ Created views for list of all users, viewing, adding, editing and deleting a single user
++ Created two templatetags 'age' and 'buzzfizz'.
++ Added columns to list view
++ Unit testing
++ CSV file view
+``` 
+
+## Changelog
 
 ```
 (unreleased)
