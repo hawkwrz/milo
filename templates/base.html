@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Test page{% endblock %}</title>
+    {% block css %}    <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>{% endblock %}
+</head>
+
+<body>
+<main>
+
+    <div class="container">
+        <h1>{% block content_title %}Page{% endblock %}</h1>
+        <div class="card-panel">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+</main>
+
+{% block javascript %}
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/js/materialize.min.js"
+            integrity="sha256-SrBfGi+Zp2LhAvy9M1bWOCXztRU9Ztztxmu5BcYPcPE=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker({format: 'dd/mm/yyyy'})
+        });
+    </script>
+{% endblock javascript %}
+</body>
+</html>
+
