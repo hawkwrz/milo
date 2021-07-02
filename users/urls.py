@@ -10,4 +10,5 @@ urlpatterns = [
     path('create', views.UserCreateView.as_view(), name='create'),
     path('<int:pk>/update', views.UserEditView.as_view(), name='edit'),
     path('<int:pk>/delete', views.UserDeleteView.as_view(), name='delete'),
+    path('csv', views.download_csv, name='csv'),
 ]

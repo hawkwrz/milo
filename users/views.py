@@ -1,8 +1,12 @@
+import csv
+
 from django.contrib.auth import get_user_model
+from django.http import HttpResponse
 from django.urls import reverse
 from django.views import generic
 
 from .forms import CreateUserForm
+from .templatetags.custom import bizzfuzz, age
 
 User = get_user_model()
 
@@ -44,3 +48,15 @@ class UserDeleteView(generic.DeleteView):
 
 class HomeView(generic.RedirectView):
     pattern_name = 'users:list'
+
+
+def download_csv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="UserList.csv"'
+    users = User.objects.all()
+    writer = csv.writer(response)
+    writer.writerow(['Username', 'Birthday', 'Eligible', 'Random Number', 'BizzFuzz'])
+    for user in users:
+        writer.writerow([user.username, user.birthday.strftime("%d/%m/%Y"),
+                         age(user.birthday), user.number, bizzfuzz(user.number)])
+    return response
