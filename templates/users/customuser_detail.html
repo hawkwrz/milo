@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content_title %}User detail{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="input-field col s6">
+            <input readonly value="{{ user.username }}" id="readonly_username" type="text"
+                   class="">
+            <label class="" for="readonly_username">Username:</label>
+        </div>
+        <div class="input-field col s6">
+            <input readonly value="{{ user.birthday }}" id="readonly_birthday" type="text"
+                   class="">
+            <label class="" for="readonly_birthday">Birthday:</label>
+        </div>
+        <div class="input-field col s4">
+            <input readonly value="{{ user.number }}" id="readonly_number" type="text"
+                   class="">
+            <label class="" for="readonly_number">Random Number:</label>
+        </div>
+        </div>
+    </div>
+    <a href="{% url 'users:list' %}" class="waves-effect waves-light btn green"><i class="material-icons left">arrow_back</i>Back</a>
+    <a href="{% url 'users:edit' user.pk %}" class="waves-effect waves-light btn blue"><i class="material-icons left">edit</i>Edit</a>
+    <a href="{% url 'users:delete' user.pk %}" class="waves-effect waves-light btn red"><i class="material-icons left">cancel</i>Delete</a>
+{% endblock %}

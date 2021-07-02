@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content_title %}User list{% endblock %}
+
+{% block content %}
+    <a class="waves-effect waves-light btn green" href={% url 'users:create' %}>add</a>
+
+    <table style="width:100%">
+        <tr>
+            <th>Username</th>
+            <th>Birthday</th>
+            <th>Random Number</th>
+
+        {% for user in object_list %}
+            <tr>
+                <td><a href="{% url 'users:detail' user.pk %}">{{ user.username }}</a></td>
+                <td>{{ user.birthday }}</td>
+                <td>{{ user.number }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

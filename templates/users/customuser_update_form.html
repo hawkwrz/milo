@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content_title %}Update User{% endblock %}
+{% block content %}
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Update User</button>
+        <a href="{% url 'users:list' %}" class="waves-effect waves-light btn green"><i class="material-icons left">arrow_back</i>Back</a>
+    </form>
+{% endblock %}
