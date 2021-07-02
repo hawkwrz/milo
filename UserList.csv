@@ -1,0 +1,10 @@
+Username,Birthday,Eligible,Random Number,BizzFuzz
+Stefan,04/07/2021,blocked,48,Fizz
+Jacek,07/04/2021,blocked,69,Fizz
+Kuba,07/03/2002,allowed,16,16
+Magda,07/08/1993,allowed,94,94
+Zbyszek,07/02/2021,blocked,50,Buzz
+Maciej,02/04/2021,blocked,90,FizzBuzz
+Jakub,07/03/2021,blocked,92,92
+JakubZ,14/02/1993,allowed,88,88
+Janek,13/04/1993,allowed,12,Fizz
