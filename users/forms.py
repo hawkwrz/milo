@@ -10,5 +10,5 @@ class CreateUserForm(UserCreationForm):
         model = User
         fields = ('username', 'birthday', 'password1', 'password2',)
         widgets = {
-            'birthday': forms.DateInput(attrs={'class': 'datepicker'}, format='%d/%m/%y'),
+            'birthday': forms.DateInput(attrs={'class': 'datepicker'}, format='%d/%m/%Y'),
         }

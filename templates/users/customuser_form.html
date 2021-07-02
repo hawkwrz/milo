@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load materializecss %}
+
 {% block content_title %}Add User{% endblock %}
 {% block content %}
     <form method="post" novalidate>
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|materializecss }}
         <button type="submit" class="btn btn-success">Add User</button>
         <a href="{% url 'users:list' %}" class="waves-effect waves-light btn green"><i class="material-icons left">arrow_back</i>Back</a>
     </form>
